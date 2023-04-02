@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fbd_constrainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoSecundario"
+    tools:context=".frag.frag_bd">
+
+
+    <Spinner
+        android:id="@+id/fbd_spin_catg"
+        android:layout_width="303dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/acepto"
+        android:textAlignment="center"
+        android:popupBackground="@color/fondoPopupSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbd_search_entr"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fbd_text_Entgtitle"
+        android:layout_width="100dp"
+        android:layout_height="26dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/entradas"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbd_spin_catg" />
+
+    <SearchView
+        android:id="@+id/fbd_search_entr"
+        android:layout_width="384dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/fbd_list_entr"
+        android:layout_width="403dp"
+        android:layout_height="535dp"
+        android:layout_marginStart="4dp"
+        android:paddingTop="20dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbd_text_Entgtitle" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fabmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:fab_labelStyle="@style/labelstyleYor"
+        app:fab_labelsPosition="left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbd_fab_add_ent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_icon="@drawable/ic_newentrada"
+            app:fab_size="mini"
+            app:fab_title="@string/nueva_entrada" />
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbd_fab_add_catg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_icon="@drawable/ic_newcatg"
+            app:fab_size="mini"
+            app:fab_title="@string/nueva_categoria" />
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbd_fab_ren_catg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_icon="@drawable/ic_baseline_bookmarks_24"
+            app:fab_size="mini"
+            app:fab_title="@string/renombrar_categoria" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbd_fab_del_catg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#FFF"
+            app:fab_icon="@drawable/ic_delcatg"
+            app:fab_size="mini"
+            app:fab_title="@string/borrar_categoria" />
+
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A86EAAA4"
+    tools:context=".frag.frag_values">
+
+
+    <TextView
+        android:id="@+id/fvalues_text_title"
+        android:layout_width="342dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:inputType="textMultiLine|text"
+        android:singleLine="true"
+        android:text="@string/contenido"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fvalues_editvalues"
+        android:layout_width="705dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/values"
+        android:inputType="textMultiLine|text"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fvalues_text_title" />
+
+    <Button
+        android:id="@+id/fvalues_btn_back"
+        android:layout_width="162dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#2A3070"
+        android:text="@string/aplicar_y_volver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fvalues_editvalues" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

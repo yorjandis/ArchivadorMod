@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="labelstyleYor">
+       <item name="android:background"> @drawable/bglabel</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+
+
+    <style name="btnVirtualKeyboard">
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:backgroundTint">#253155</item>
+        <item name="android:contentDescription">"@string/texto"</item>
+
+    </style>
+
+</resources>

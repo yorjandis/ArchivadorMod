@@ -1,0 +1,215 @@
+<resources>
+    <string name="app_name">Archivador</string>
+    <string name="Search">buscar</string>
+    <string name="bdcreadaok">La BD se créo correctamente</string>
+    <string name="qr_copiadoalportapapeles">Copiado al portapeles interno</string>
+    <string name="desencriptar_fichero">Desencriptar fichero</string>
+    <string name="hash_fichero">Hash fichero</string>
+    <string name="contrase_a">Contraseña:</string>
+    <string name="verificar_hash_fichero">Verificar hash fichero</string>
+    <string name="algoritmo_para_hash">Algoritmo para hash:</string>
+    <string name="log" translatable="false">Log-Información</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="encriptar_fichero">Encriptar fichero</string>
+    <string name="hash_de_texto">Hash de texto</string>
+    <string name="verificar_hash_de_texto">Verificar hash de texto</string>
+    <string name="ubicaci_n_de_la_base_de_datos">Ubicación de la Base de Datos:</string>
+    <string name="encriptar_con_la_contrase_a_de_cifrado">Encriptar con la contraseña de cifrado</string>
+    <string name="encriptar_la_base_de_datos">Encriptar la base de datos</string>
+    <string name="contrase_a_de_encriptaci_n">contraseña de encriptación</string>
+    <string name="contrase_a_de_cifrado">contraseña de cifrado</string>
+    <string name="filename" translatable="false">filename</string>
+    <string name="img_pass" translatable="false">img_pass</string>
+    <string name="ubicaci_n">Ubicación:</string>
+    <string name="la_bd_esta_encriptada">La BD esta encriptada</string>
+    <string name="utiliza_la_misma_contrase_a_de_cifrado">Utiliza la misma contraseña de cifrado</string>
+    <string name="img_file" translatable="false">img_file</string>
+    <string name="img_del" translatable="false">img_del</string>
+    <string name="donar">" Donar"</string>
+    <string name="pass" translatable="false">Pass</string>
+    <string name="info" translatable="false">Info</string>
+    <string name="categorias">Categorias</string>
+    <string name="entradas">Entradas:</string>
+    <string name="bienvenidos">Bienvenidos</string>
+    <string name="abrir_bd">Abrir BD</string>
+    <string name="info_inicial">La contraseña de acceso nunca se guarda; si la olvida no podrá abrir el fichero de BD asociado. Esta app no posee permisos de conección a internet. Toda las operaciones se realizan en el dispositivo. La información de la BD permanece todo el tiempo cifrada con algoritmos de encriptación robustos.</string>
+    <string name="ltimos_accesos">Últimos Accesos:</string>
+    <string name="contenido">Contenido</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="volver">Volver</string>
+    <string name="cancelar">cancelar</string>
+    <string name="values">valor</string>
+    <string name="crear_bd">Crear BD</string>
+    <string name="img_logotipo" translatable="false">img logotipo</string>
+    <string name="img_rem" translatable="false">img_rem</string>
+    <string name="acepto_los_terminos_y_condiciones">Acepto los términos y condiciones</string>
+    <string name="aplicar_y_volver">Aplicar y volver</string>
+    <string name="herramientas">Herramientas</string>
+    <string name="configuraci_n">Configuración</string>
+    <string name="t_rminos_y_condiciones">Términos y condiciones</string>
+    <string name="ante_todo_muchas_gracias">Ante todo, Muchas Gracias</string>
+    <string name="si_le_ha_sido_til_esta_app_y_se_siente_agradecido_apoye_este_proyecto_haciendo_una_donaci_n_con_su_ayuda_podr_hacer_m_s_herramientas_como_estas_totalmente_gratis">Si le ha sido útil esta app y se siente agradecido apoye este proyecto haciendo una donación. Con su ayuda podré hacer más herramientas como estas, totalmente gratis.</string>
+    <string name="paypal_donate" translatable="false">paypal_donate</string>
+    <string name="image_logo_app" translatable="false">image_logo_app</string>
+    <string name="debe_aceptar_terminos_condiciones">Debe Aceptar los términos y condiciones</string>
+    <string name="debe_proveer_direccion_contraseña">Debe proveer una dirección y una contraseña</string>
+    <string name="debe_colocarse_clave_encriptacion">Debe colocarse una clave de encriptación</string>
+    <string name="la_base_datos_no_se_pudo_cargar">La base de datos no se pudo cargar</string>
+    <string name="buscar_en_titulos_de_entradas">buscar en titulos de entradas</string>
+    <string name="por_favor_coloque_un_nombre">Por favor, coloque un nombre</string>
+    <string name="nueva_entrada">Nueva entrada</string>
+    <string name="nueva_categoria">Nueva categoría</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="eliminar_la_categoria">Eliminar la  Categoria:</string>
+    <string name="quieres_eliminar_Categoria_se_eliminará_entradas_asociadas">¿Quieres eliminar la Categoria? Se eliminará todas las entradas asociadas.</string>
+    <string name="error_no_se_ha_podido_adicionar_nueva_categoria">Error: No se ha podido adicionar la nueva categoria</string>
+    <string name="ya_existe_una_categoría_con_ese_nombre">Ya existe una categoría con ese nombre</string>
+    <string name="error_no_se_ha_podido_adicionar_la_nueva_entrada">Error: No se ha podido adicionar la nueva entrada</string>
+    <string name="ya_existe_una_entrada_con_ese_nombre">Ya existe una entrada con ese nombre</string>
+    <string name="eliminar_Entrada">Eliminar la  Entrada:</string>
+    <string name="quieres_eliminar_entrada">¿Quieres eliminar la Entrada?</string>
+    <string name="la_entrada_elimino_correctamente">La entrada se eliminó correctamente</string>
+    <string name="no_se_pudo_eliminar_entrada">No se pudo eliminar la entrada</string>
+    <string name="renombrar_entrada">Renombrar entrada:</string>
+    <string name="por_favor_coloque_nombre_nueva_entrada">Por favor, coloque el nombre de la nueva entrada:</string>
+    <string name="renombrar">renombrar</string>
+    <string name="no_ha_podido_renombrar_entrada">No se ha podido renombrar la entrada</string>
+    <string name="ya_existe_entrada_con_este_nombre">Ya existe una entrada con este nombre</string>
+    <string name="tamano_bytes">Tamaño en bytes:</string>
+    <string name="la_operación_ha_fallado">La operación ha fallado</string>
+    <string name="debe_establecer_la_ruta_de_un_fichero">Debe establecer la ruta de un fichero</string>
+    <string name="debe_establecer_un_texto_para_calcular_su_hash">Debe establecer un texto para calcular su hash</string>
+    <string name="el_hash_coincide">El hash coincide!</string>
+    <string name="los_hash_NO_son_iguales">Los hash NO son iguales</string>
+    <string name="debe_establecer_un_fichero_y_un_hash">Debe establecer un fichero y un hash</string>
+    <string name="el_hash_NO_Coincide">El hash NO Coincide!</string>
+    <string name="colocar_el_hash_en_a_comprobrar_en_el_cuadro">Colocar el hash en a comprobrar en el cuadro de texto de dirección del fichero</string>
+    <string name="datos_del_fichero_original">Datos del fichero original</string>
+    <string name="datos_del_fichero_desencriptado">Datos del fichero desencriptado</string>
+    <string name="buscar">Buscar</string>
+    <string name="pagina_web">Página web</string>
+    <string name="valorar_esta_app">Valorar esta App :)</string>
+    <string name="encriptar_texto">Encriptar texto</string>
+    <string name="desencriptar_texto">Desencriptar texto</string>
+    <string name="ultimo_fichero_accedido">"Último fichero accedido: "</string>
+    <string name="abrir_base_de_datos">Abrir Base de Datos</string>
+    <string name="por_favor_ofresca_siguientes_datos">Por favor, ofrezca los siguientes datos:</string>
+    <string name="crear_base_datos">Crear Base de Datos</string>
+    <string name="showhide_pass" translatable="false">showhide pass</string>
+    <string name="debe_permitir_acceso_al_almacenamiento">Debe permitir el acceso al almacenamiento externo!</string>
+    <string name="nombre">Nombre:</string>
+    <string name="datos_del_fichero_encriptado">Datos del fichero encriptado:</string>
+    <string name="resultado">Resultado:</string>
+    <string name="debe_colocar_un_texto_y_contraseña">Debe colocar un texto y una contraseña</string>
+    <string name="el_fichero_de_bd_esta_vacio">El fichero de BD esta vacio</string>
+    <string name="copiar">Copiar</string>
+    <string name="atras">Atras</string>
+    <string name="generador_contraseña">Generador de contraseñas</string>
+    <string name="la_app_necesita_permisos">La aplicación necesita acceder al almacenamiento externo. ¿Desea otorgar el permiso?</string>
+    <string name="acepto">Acepto</string>
+    <string name="salir">Salir</string>
+    <string name="renombrar_una_categoria">"Renombrar la Categoria: "</string>
+    <string name="por_favor_coloque_una_nueva_categoria">Por favor coloque una nueva Categoría</string>
+    <string name="ya_existe_una_categoria_con_ese_nombre">Ya existe una categoría con ese nombre</string>
+    <string name="renombrar_categoria">Renombrar categoría</string>
+    <string name="borrar_categoria">Borrar Categoria</string>
+    <string name="key" translatable="false">key</string>
+    <string name="copiar_por_interno">Copiar por Interno</string>
+    <string name="longitud_de_la_contrase_a">Longitud de la Contraseña</string>
+    <string name="may_sculas">Mayúsculas</string>
+    <string name="min_sculas">Minúsculas</string>
+    <string name="n_meros">Números</string>
+    <string name="s_mbolos">Símbolos</string>
+    <string name="length" translatable="false">length</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="la_categoria_se_elimino_correctamente">La categoria no se eliminó correctamente</string>
+    <string name="no_se_pudo_eliminar_la_categoria">No se pudo eliminar la categoría</string>
+    <string name="adicionar_nueva_categoria">Adicionar nueva categoría</string>
+    <string name="adicionar_nueva_entrada_en">Adicionar nueva entrada en</string>
+    <string name="leer_qr">Leer QR</string>
+    <string name="teclado_virtual">Teclado virtual</string>
+    <string name="key_generator" translatable="false">Key Generator</string>
+    <string name="abc" translatable="false">ABC</string>
+    <string name="simb" translatable="false">Simb</string>
+    <string name="generar_qr">Generator QR CODE</string>
+    <string name="img" translatable="false">Imagen</string>
+    <string name="texto">Texto</string>
+    <string name="teclado">Teclado</string>
+    <string name="pegar_del_portapapeles">Pegar del portapapeles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="error_al_migrar_bd">Error al migrar la BD</string>
+    <string name="fichero_bd_creado_ok">Fichero de BD creada correctamente</string>
+    <string name="asistente_de_migraci_n_de_bd">Asistente de migración de BD</string>
+    <string name="este_asistente_le_ayudar_a_migrar_su_bd_al_nuevo_algoritmo_de_encriptaci_n_aes_gcm_solo_utilizar_si_tiene_una_bd_creada_con_la_versi_n_1_2_8_o_inferior_de_archivador">Este asistente le ayudará a migrar su BD al nuevo algoritmo de encriptación AES/GCM. Solo utilizar si tiene una BD creada con la versión 1.2.8 o inferior de Archivador.</string>
+    <string name="coloque_su_clave_anterior">Coloque su clave anterior</string>
+    <string name="migrar">Migrar</string>
+    <string name="ruta_del_fichero_bd_anterior">ruta del fichero BD Anterior</string>
+    <string name="keyboard" translatable="false">keyboard</string>
+    <string name="existe_nueva_version">Existe una versión nueva en la play store</string>
+    <string name="mayus" translatable="false">Mayus</string>
+    <string name="mayuscula" translatable="false">Mayuscula</string>
+    <string name="simbolos" translatable="false">Simbolos</string>
+    <string name="atlas" translatable="false">Atlas</string>
+
+    <string-array name="abecedario">
+        <item>q</item>
+        <item>w</item>
+        <item>e</item>
+        <item>r</item>
+        <item>t</item>
+        <item>y</item>
+        <item>u</item>
+        <item>i</item>
+        <item>o</item>
+        <item>p</item>
+        <item>a</item>
+        <item>s</item>
+        <item>d</item>
+        <item>f</item>
+        <item>g</item>
+        <item>h</item>
+        <item>j</item>
+        <item>k</item>
+        <item>l</item>
+        <item>ñ</item>
+        <item>z</item>
+        <item>x</item>
+        <item>c</item>
+        <item>v</item>
+        <item>b</item>
+        <item>n</item>
+        <item>m</item>
+    </string-array>
+    <string-array name="simbolos">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>0</item>
+        <item>\@</item>
+        <item>"#"</item>
+        <item>€</item>
+        <item>_</item>
+        <item>&amp;</item>
+        <item>-</item>
+        <item>+</item>
+        <item>(</item>
+        <item>)</item>
+        <item>/</item>
+        <item>*</item>
+        <item>"</item>
+        <item>\'</item>
+        <item>:</item>
+        <item>;</item>
+        <item>!</item>
+        <item>\?</item>
+    </string-array>
+
+
+</resources>

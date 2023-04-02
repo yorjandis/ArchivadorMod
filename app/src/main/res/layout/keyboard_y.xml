@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp">
+
+    <EditText
+        android:id="@+id/modal_keyboard_edit"
+        android:layout_width="395dp"
+        android:layout_height="175dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/texto"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine|textNoSuggestions|textVisiblePassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#5B7F88"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_edit">
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b1"
+            android:layout_width="33dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b2"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="1"
+            android:contentDescription="@string/texto"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b3"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="2"
+            android:contentDescription="@string/texto"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b4"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="3"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b3"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b5"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="4"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b4"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b6"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="5"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b5"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b7"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="6"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b6"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b8"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="7"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b7"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b9"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="8"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b8"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b10"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="9"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b9"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b11"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b12"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="11"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b11"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b2"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b24"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="23"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b23"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b14"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b21"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="20"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_btn_mayus"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b11"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b22"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="21"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b21"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b12"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b23"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="22"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b22"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b13"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b18"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="17"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b17"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b8"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b19"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="18"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b18"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b9"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b20"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="19"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b19"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b10"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b15"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="14"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b14"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b5"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b16"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="15"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b15"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b6"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b13"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="12"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b12"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b3"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b14"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="13"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b13"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b4"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b25"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="24"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b24"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b15"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b26"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="25"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b25"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b16"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b27"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="26"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b26"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b18"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_b17"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            style="@style/btnVirtualKeyboard"
+            android:tag="16"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_b16"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b7"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_btn_mayus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="7dp"
+            android:contentDescription="@string/mayuscula"
+            android:src="@drawable/ic_up"
+            android:backgroundTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b11"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_btn_simb"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/simbolos"
+            android:src="@drawable/ic_simbolos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b21" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_btn_modehide"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/simbolos"
+            android:src="@drawable/ic_showpass"
+            android:backgroundTint="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_btn_simb"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b21" />
+
+        <Button
+            android:id="@+id/modal_keyboard_btn_copy"
+            android:layout_width="95dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#54A5BA"
+            android:text="@string/copiar"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_btn_espacio"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/modal_keyboard_btn_qr"
+            android:layout_width="139dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#54A5BA"
+            android:text="@string/generar_qr"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_btn_espacio"
+            tools:ignore="TextContrastCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_back"
+            android:layout_width="56dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/atras"
+            android:src="@drawable/ic_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b20"
+            tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/modal_keyboard_btn_espacio"
+            android:layout_width="180dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#5B7F88"
+            app:layout_constraintEnd_toStartOf="@+id/modal_keyboard_btn_enter"
+            app:layout_constraintStart_toEndOf="@+id/modal_keyboard_btn_modehide"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/modal_keyboard_btn_home"
+            android:layout_width="57dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#F57F17"
+            android:contentDescription="@string/atras"
+            app:icon="@drawable/ic_bartools_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/modal_keyboard_btn_copy"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/modal_keyboard_btn_enter"
+            android:layout_width="56dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="36dp"
+            android:contentDescription="@string/atlas"
+            android:src="@drawable/ic_arrow_enter"
+            app:layout_constraintBottom_toTopOf="@+id/modal_keyboard_btn_copy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b27"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_tools"
+        android:title="@string/herramientas" />
+    <item
+        android:id="@+id/menu_generateqr"
+        android:title="@string/generar_qr" />
+    <item
+        android:id="@+id/menu_qr"
+        android:title="@string/leer_qr" />
+    <item
+        android:id="@+id/menu_keyboard"
+        android:title="@string/teclado_virtual" />
+    <item
+        android:id="@+id/menu_migrarbd"
+        android:title="Migrar BD" />
+    <item
+        android:id="@+id/menu_privacy"
+        android:title="@string/t_rminos_y_condiciones" />
+    <item
+        android:id="@+id/menu_web"
+        android:title="@string/pagina_web" />
+    <item
+        android:id="@+id/menu_resena"
+        android:title="@string/valorar_esta_app" />
+</menu>

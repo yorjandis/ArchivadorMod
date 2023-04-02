@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/modal_tools_keygenerator_textkey"
+        android:layout_width="367dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/key"
+        android:textColor="#BF360C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/modal_tools_keygenerator_progbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:max="50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_textkey" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/longitud_de_la_contrase_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_progbar" />
+
+    <EditText
+        android:id="@+id/modal_tools_keygenerator_edittext"
+        android:layout_width="81dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/length"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <SeekBar
+        android:id="@+id/modal_tools_keygenerator_seekbar"
+        android:layout_width="222dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:max="50"
+        app:layout_constraintStart_toEndOf="@+id/modal_tools_keygenerator_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <CheckBox
+        android:id="@+id/modal_tools_keygenerator_chech_mayu"
+        android:layout_width="131dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:text="@string/may_sculas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_seekbar" />
+
+    <CheckBox
+        android:id="@+id/modal_tools_keygenerator_chech_minu"
+        android:layout_width="131dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:checked="true"
+        android:text="@string/min_sculas"
+        app:layout_constraintStart_toEndOf="@+id/modal_tools_keygenerator_chech_mayu"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_seekbar" />
+
+    <CheckBox
+        android:id="@+id/modal_tools_keygenerator_chech_num"
+        android:layout_width="131dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text="@string/n_meros"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_chech_mayu" />
+
+    <CheckBox
+        android:id="@+id/modal_tools_keygenerator_chech_simb"
+        android:layout_width="131dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:checked="true"
+        android:text="@string/s_mbolos"
+        app:layout_constraintStart_toEndOf="@+id/modal_tools_keygenerator_chech_num"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_chech_minu" />
+
+    <Button
+        android:id="@+id/modal_tools_keygenerator_btn_copiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F57F17"
+        android:text="@string/copiar"
+        android:textSize="12sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toEndOf="@+id/modal_tools_keygenerator_btn_copy_inter"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_chech_simb" />
+
+    <Button
+        android:id="@+id/modal_tools_keygenerator_btn_generate"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="64dp"
+        android:backgroundTint="#F57F17"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/ic_generate"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_progbar" />
+
+    <ImageButton
+        android:id="@+id/modal_tools_keygenerator_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#BBCF49"
+        android:contentDescription="@string/atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <Button
+        android:id="@+id/modal_tools_keygenerator_btn_copy_inter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#3395E3"
+        android:text="@string/copiar_por_interno"
+        android:textSize="12sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modal_tools_keygenerator_chech_simb" />
+</androidx.constraintlayout.widget.ConstraintLayout>

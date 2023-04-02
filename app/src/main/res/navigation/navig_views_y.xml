@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navig_views_y"
+    app:startDestination="@id/frag_home">
+
+    <fragment
+        android:id="@+id/frag_home"
+        android:name="com.ypg.archivador.frag.frag_home"
+        android:label="frag_home"
+        tools:layout="@layout/frag_home" >
+        <action
+            android:id="@+id/action_frag_home_to_frag_bd"
+            app:destination="@id/frag_bd"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_bd"
+        android:name="com.ypg.archivador.frag.frag_bd"
+        android:label="frag__bd"
+        tools:layout="@layout/frag__bd" >
+        <action
+            android:id="@+id/action_frag_bd_to_frag_values"
+            app:destination="@id/frag_values"
+            app:enterAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_frag_bd_to_frag_home"
+            app:destination="@id/frag_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_values"
+        android:name="com.ypg.archivador.frag.frag_values"
+        android:label="frag_values"
+        tools:layout="@layout/frag_values" >
+        <action
+            android:id="@+id/action_frag_values_to_frag_bd"
+            app:destination="@id/frag_bd" />
+    </fragment>
+</navigation>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/ubicaci_n_de_la_base_de_datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/mabrirbd_edit_pathBD"
+        android:layout_width="209dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/filename"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/mabrirbd_btn_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/buscar"
+        app:layout_constraintStart_toEndOf="@+id/mabrirbd_edit_pathBD"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/mabrirbd_edit_passbd"
+        android:layout_width="220dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/contrase_a_de_cifrado"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/mcrearbd_img1"
+        app:layout_constraintTop_toBottomOf="@+id/mabrirbd_edit_pathBD"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <CheckBox
+        android:id="@+id/mcrearbd_check_encripbd"
+        android:layout_width="307dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/encriptar_la_base_de_datos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mabrirbd_edit_passbd"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/mcrearbd_check_mismopass"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/encriptar_con_la_contrase_a_de_cifrado"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcrearbd_check_encripbd" />
+
+    <EditText
+        android:id="@+id/mcrearbd_edit_passencript"
+        android:layout_width="220dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/contrase_a_de_encriptaci_n"
+        android:inputType="textPassword"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/mcrearbd_img2"
+        app:layout_constraintTop_toBottomOf="@+id/mcrearbd_check_mismopass"
+        android:importantForAutofill="no" />
+
+    <ImageView
+        android:id="@+id/mcrearbd_img1"
+        android:layout_width="36dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/img_pass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mabrirbd_edit_pathBD"
+        app:srcCompat="@drawable/my_passwords" />
+
+    <ImageView
+        android:id="@+id/mcrearbd_img2"
+        android:layout_width="36dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/img_pass"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mcrearbd_check_mismopass"
+        app:srcCompat="@drawable/my_passwords" />
+
+    <ImageView
+        android:id="@+id/mcrearbd_img_showhide1"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/showhide_pass"
+        app:layout_constraintStart_toEndOf="@+id/mabrirbd_edit_passbd"
+        app:layout_constraintTop_toBottomOf="@+id/mabrirbd_btn_path"
+        app:srcCompat="@drawable/ic_noshowpass" />
+
+    <ImageView
+        android:id="@+id/mcrearbd_img_showhide2"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/showhide_pass"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/mcrearbd_edit_passencript"
+        app:layout_constraintTop_toTopOf="@+id/mcrearbd_edit_passencript"
+        app:srcCompat="@drawable/ic_noshowpass" />
+
+    <ImageView
+        android:id="@+id/mcrearbd_img_keyboard1"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/keyboard"
+        app:layout_constraintStart_toEndOf="@+id/mcrearbd_img_showhide1"
+        app:layout_constraintTop_toBottomOf="@+id/mabrirbd_btn_path"
+        app:srcCompat="@drawable/ic_keyboard" />
+
+    <ImageView
+        android:id="@+id/mcrearbd_img_keyboard2"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/keyboard"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/mcrearbd_img_showhide2"
+        app:layout_constraintTop_toBottomOf="@+id/mcrearbd_check_mismopass"
+        app:srcCompat="@drawable/ic_keyboard" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tools_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoSecundario"
+    tools:context=".ToolsActivity">
+
+
+    <EditText
+        android:id="@+id/tools_edit_papth"
+        android:layout_width="278dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="@string/filename"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/tools_btn_enc_fichero"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#D89634"
+        android:text="@string/encriptar_fichero"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tools_edit_text"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_hash_text"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#34D87E"
+        android:text="@string/hash_de_texto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_hash_fichero"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/contrase_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/algoritmo_para_hash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tools_edit_papth"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/tools_edit_text"
+        android:layout_width="370dp"
+        android:layout_height="264dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#CFD58E"
+        android:backgroundTintMode="multiply"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/info"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tools_edit_pass"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/tools_btn_checkhash_text"
+        android:layout_width="204dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#34D87E"
+        android:text="@string/verificar_hash_de_texto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_btn_hash_text"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_checkhash_fichero"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/tools_spin_algorit"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="123dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:spinnerMode="dropdown"
+        android:textAlignment="center"
+        android:popupBackground="@color/fondoPopupSpinner"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tools_edit_papth"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_papth"
+        android:layout_width="89dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#0D47A1"
+        android:text="@string/buscar"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_edit_papth"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/tools_edit_pass"
+        android:layout_width="283dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="@string/pass"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_checkhash_fichero"
+        android:layout_width="204dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#34D87E"
+        android:text="@string/verificar_hash_fichero"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_btn_hash_fichero"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_deenc_texto"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_deenc_fichero"
+        android:layout_width="204dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#D89634"
+        android:text="@string/desencriptar_fichero"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_btn_enc_fichero"
+        app:layout_constraintTop_toBottomOf="@+id/tools_edit_text"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_hash_fichero"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#34D87E"
+        android:text="@string/hash_fichero"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_enc_texto"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#397C26"
+        android:text="@string/cerrar"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_enc_texto"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#D89634"
+        android:text="@string/encriptar_texto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_enc_fichero"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_deenc_texto"
+        android:layout_width="204dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#D89634"
+        android:text="@string/desencriptar_texto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_btn_enc_texto"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_deenc_fichero"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_keygenerator"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#5E7E10"
+        android:text="@string/key_generator"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_hash_text"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/tools_btn_qrgenerator"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#5E7E10"
+        android:text="@string/generar_qr"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_btn_keygenerator"
+        app:layout_constraintTop_toBottomOf="@+id/tools_btn_checkhash_text"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/tools_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_showhidepass"
+        app:layout_constraintTop_toBottomOf="@+id/tools_spin_algorit"
+        app:srcCompat="@drawable/ic_keyboard" />
+
+    <ImageView
+        android:id="@+id/tools_showhidepass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toEndOf="@+id/tools_edit_pass"
+        app:layout_constraintTop_toBottomOf="@+id/tools_spin_algorit"
+        app:srcCompat="@drawable/ic_noshowpass" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

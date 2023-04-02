@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/drawable/gradient_spinner.xml" value="0.3385" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/drawable/ic_bartools_home.xml" value="0.3135" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout-land/frag__bd.xml" value="0.28445945945945944" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/activity_main.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/activity_migrar.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/activity_migrar1.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/activity_privacy.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/activity_tools.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/frag__bd.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/frag_home.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/frag_values.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/frag_zip_bd.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/keyboard_y.xml" value="0.33" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/modal_abrir_bd.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/modal_crear_bd.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/layout/modal_migrar.xml" value="0.23513513513513515" />
+        <entry key="..\:/Deveploment/Android/Proyectos_Studio/ArchivadorMod2/app/src/main/res/menu/menu_main.xml" value="0.23513513513513515" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
