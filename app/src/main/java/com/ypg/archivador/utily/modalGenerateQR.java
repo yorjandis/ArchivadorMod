@@ -1,19 +1,17 @@
 package com.ypg.archivador.utily;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.ypg.archivador.MainActivity;
 import com.ypg.archivador.R;
 
 import androidmads.library.qrgenearator.QRGContents;
@@ -53,8 +51,6 @@ public class modalGenerateQR {
         Button btn_GenerarQR = (Button) view.findViewById(R.id.modal_qr_btn_gnerarqr);
         Button btn_pegar = (Button) view.findViewById(R.id.modal_qr_btn_pegar);
 
-
-
         builder.setView(view);
 
         //Generando el qr del texto pasado como parámetro:
@@ -73,6 +69,7 @@ public class modalGenerateQR {
         btn_Atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                MainActivity.mainActivityThis.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER);
                 alertDialog.dismiss();
             }
         });

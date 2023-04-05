@@ -2,6 +2,7 @@ package com.ypg.archivador.utily;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.ypg.archivador.MainActivity;
 import com.ypg.archivador.R;
 
 
@@ -55,8 +57,8 @@ public class Keyboard_y  implements View.OnClickListener {
 
 
 
-        Button btn_copy, btn_QR, btn_espacio, btn_home;
-        ImageButton btn_Mayus, btn_simb, btn_back, btn_enter;
+        Button btn_copy, btn_QR, btn_espacio;
+        ImageButton btn_Mayus, btn_simb, btn_back, btn_enter, btn_home;
 
         View view = LayoutInflater.from(G_Context).inflate(R.layout.keyboard_y, null, false);
 
@@ -177,6 +179,7 @@ public class Keyboard_y  implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 modalGenerateQR modalGenerateQR = new modalGenerateQR(G_Context);
+                MainActivity.mainActivityThis.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 modalGenerateQR.DialogGenerateQR(edit.getText().toString());
             }
         });
@@ -259,13 +262,18 @@ public class Keyboard_y  implements View.OnClickListener {
             btn_27.setImageResource(R.drawable.m);
     }
 
-
-
-
-
     //Func: Asigna caracteres y numeros
     private void AsingSimbAndNumber(){
-
+        btn_1.setImageResource(R.drawable.cero);
+        btn_2.setImageResource(R.drawable.uno);
+        btn_3.setImageResource(R.drawable.dos);
+        btn_4.setImageResource(R.drawable.tres);
+        btn_5.setImageResource(R.drawable.cuatro);
+        btn_6.setImageResource(R.drawable.cinco);
+        btn_7.setImageResource(R.drawable.seis);
+        btn_8.setImageResource(R.drawable.siete);
+        btn_9.setImageResource(R.drawable.ocho);
+        btn_10.setImageResource(R.drawable.nueve);
     }
 
 

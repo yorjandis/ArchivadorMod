@@ -2,34 +2,36 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:layout_gravity="center"
+    android:padding="4dp">
 
     <ImageView
         android:id="@+id/modal_qr_img"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:layout_marginStart="24dp"
         android:contentDescription="@string/img"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
         android:id="@+id/modal_qr_edit"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="105dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        android:background="@color/teal_700"
-        android:backgroundTint="#E6EDC3"
+        android:background="@drawable/shapebuttonhome"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/texto"
         android:inputType="textMultiLine"
         android:padding="5dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modal_qr_img" />
 
@@ -37,42 +39,49 @@
         android:id="@+id/modal_qr_btn_teclado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="56dp"
+        android:inputType="text"
         android:text="@string/teclado"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/modal_qr_img_back"
+        app:layout_constraintEnd_toStartOf="@+id/modal_qr_btn_gnerarqr"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modal_qr_edit" />
 
     <Button
         android:id="@+id/modal_qr_btn_gnerarqr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:inputType="text"
         android:text="@string/generar_qr"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/modal_qr_btn_teclado"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modal_qr_edit" />
 
     <Button
         android:id="@+id/modal_qr_btn_pegar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="text"
         android:text="@string/pegar_del_portapapeles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/modal_qr_img_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/modal_qr_btn_teclado" />
 
     <ImageView
         android:id="@+id/modal_qr_img_back"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/img"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modal_qr_edit"
+        android:layout_width="57dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shpebuttoncircular"
+        android:contentDescription="@string/atras"
+        android:src="@drawable/ic_bartools_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/modal_qr_btn_gnerarqr"
         app:srcCompat="@drawable/ic_bartools_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
 
     private String G_QR_RRESULTCODE = "";
 
+    public static MainActivity mainActivityThis; //Referencia a MainActivity
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
         //para evitar tomar capturas de pantallas:
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_main);
+
+
+        mainActivityThis = this;
 
         //setup tools bar:
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -218,6 +224,7 @@ if (G_QR_RRESULTCODE == "5522"){
 
             case (R.id.menu_generateqr):{
                 modalGenerateQR modalGenerateQR = new modalGenerateQR(MainActivity.this);
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                 modalGenerateQR.DialogGenerateQR(UtilsY.valueCopy);
                 break;
             }

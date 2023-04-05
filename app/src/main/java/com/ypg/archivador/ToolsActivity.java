@@ -4,24 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -356,7 +351,8 @@ public class ToolsActivity extends AppCompatActivity implements View.OnClickList
 
             case (R.id.tools_btn_qrgenerator): //Abre el generador de códigos QR
                 modalGenerateQR modalGenerator = new modalGenerateQR(this);
-                modalGenerator.DialogGenerateQR("Example");
+                MainActivity.mainActivityThis.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+                modalGenerator.DialogGenerateQR("");
                 break;
 
         }
