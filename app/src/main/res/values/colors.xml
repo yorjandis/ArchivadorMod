@@ -11,9 +11,12 @@
 
 //Colores personales:
 
-    <color name="fondoPrincipal">#1C2E35</color>
-    <color name="fondoSecundario">#C6BA93</color>
+    <color name="fondoPrincipal">#09122E</color>
+    <color name="fondofragvalues">#9EAFB1</color>
+    <color name="fondoSecundario">#BECDCF</color>
     <color name="fondoPopupSpinner">#D5C6B4</color>
+    <color name="botoneshome">#F3B194</color>
+    <color name="fondoboton_aplicaryvolver">#82838F</color>
     <color name="fondoBotonesTecladoVirtual">#22263A</color>
     <color name="mayuscula">#FFC107</color>
 

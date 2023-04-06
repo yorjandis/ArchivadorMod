@@ -10,8 +10,8 @@ android {
         applicationId "com.ypg.archivador"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 17
-        versionName "1.2.13"
+        versionCode 18
+        versionName "1.3.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

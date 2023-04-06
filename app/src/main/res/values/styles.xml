@@ -15,7 +15,7 @@
         <item name="android:scaleType">centerInside</item>
         <item name="android:adjustViewBounds">true</item>
         <item name="android:padding">5dp</item>
-        <item name="android:backgroundTint">#253155</item>
+        <item name="android:backgroundTint">#090909</item>
         <item name="android:contentDescription">"@string/texto"</item>
 
     </style>

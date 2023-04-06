@@ -360,12 +360,14 @@
             android:id="@+id/modal_keyboard_btn_modehide"
             android:layout_width="50dp"
             android:layout_height="48dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
-            android:contentDescription="@string/simbolos"
+            android:layout_marginEnd="10dp"
             android:background="@drawable/shpebuttoncircular"
-            android:src="@drawable/ic_showpass"
+            android:contentDescription="@string/simbolos"
 
+            android:src="@drawable/ic_showpass"
+            app:layout_constraintEnd_toStartOf="@+id/modal_keyboard_btn_espacio"
             app:layout_constraintStart_toEndOf="@+id/modal_keyboard_btn_simb"
             app:layout_constraintTop_toBottomOf="@+id/modal_keyboard_b21" />
 
@@ -374,6 +376,7 @@
             android:layout_width="95dp"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="4dp"
             android:backgroundTint="#54A5BA"
             android:text="@string/copiar"
             app:cornerRadius="10dp"
@@ -385,6 +388,7 @@
             android:id="@+id/modal_keyboard_btn_qr"
             android:layout_width="139dp"
             android:layout_height="53dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:backgroundTint="#54A5BA"
             android:text="@string/generar_qr"

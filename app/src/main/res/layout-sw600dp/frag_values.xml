@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A86EAAA4"
+    android:background="@color/fondofragvalues"
     tools:context=".frag.frag_values">
 
 
@@ -49,7 +49,7 @@
         android:layout_height="51dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#2A3070"
+        android:backgroundTint="@color/fondoboton_aplicaryvolver"
         android:text="@string/aplicar_y_volver"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fvalues_editvalues" />

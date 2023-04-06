@@ -125,7 +125,6 @@ public class frag_home extends Fragment {
         text_privacy = (TextView) view.findViewById(R.id.fhome_text_privacy);
         switchc = (SwitchCompat) view.findViewById(R.id.fhome_btn_switch);
         txt_version = (TextView) view.findViewById(R.id.fhome_txt_version);
-        frag_home.txt_version.setTextColor(Color.BLACK);
         frag_home.txt_version.setText("v."+ BuildConfig.VERSION_NAME);
 
 

@@ -25,6 +25,9 @@ public class Keyboard_y  implements View.OnClickListener {
 
     private Context G_Context;
 
+
+
+
  private   ImageButton btn_1, btn_2,btn_3,btn_4,btn_5,btn_6,btn_7,btn_8,btn_9,btn_10,
             btn_11,btn_12,btn_13,btn_14,btn_15,btn_16,btn_17,btn_18,btn_19,btn_20,
             btn_21,btn_22, btn_23, btn_24, btn_25, btn_26, btn_27;
@@ -33,15 +36,12 @@ public class Keyboard_y  implements View.OnClickListener {
     private  String[] abc; //Almacena las letras del abecedario
 
 
-
-
     
     int index; //Almacena la posicon actual del cursor eb el edit
     
     public Keyboard_y(Context g_Context, boolean PismodeHide) {
         G_Context = g_Context;
         ismodeHide = PismodeHide;
-        abc = G_Context.getResources().getStringArray(R.array.abecedario);
 
     }
 
@@ -118,6 +118,7 @@ public class Keyboard_y  implements View.OnClickListener {
         btn_modehide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if(ismodeHide){
                     ismodeHide = false;
                     btn_modehide.setImageResource(R.drawable.ic_showpass);
@@ -134,20 +135,14 @@ public class Keyboard_y  implements View.OnClickListener {
         btn_simb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isSimb){
-                    if(isMayus){
-                        AsigngLetter(true);
-                        isMayus = true;
-                    }else{
-                        AsigngLetter(false);
-                        isMayus = false;
-                    }
-                    isSimb = false;
-                }else{
-                    AsingSimbAndNumber();
-                    isSimb = true;
-                }
 
+                if (isSimb){
+                    isSimb = false;
+                    AsigngLetter(false);
+                }else {
+                    isSimb = true;
+                    AsingSimbAndNumber();
+                }
             }
         });
 
@@ -233,6 +228,8 @@ public class Keyboard_y  implements View.OnClickListener {
 
     //Func: Asigna el texto de cada boton
     private void AsigngLetter(boolean mayus_P){
+        isSimb = false;
+        abc = G_Context.getResources().getStringArray(R.array.abecedario);
             btn_1.setImageResource(R.drawable.q);
             btn_2.setImageResource(R.drawable.w);
             btn_3.setImageResource(R.drawable.e);
@@ -264,6 +261,8 @@ public class Keyboard_y  implements View.OnClickListener {
 
     //Func: Asigna caracteres y numeros
     private void AsingSimbAndNumber(){
+        isSimb = true;
+        abc = G_Context.getResources().getStringArray(R.array.simbolos);
         btn_1.setImageResource(R.drawable.cero);
         btn_2.setImageResource(R.drawable.uno);
         btn_3.setImageResource(R.drawable.dos);
@@ -274,6 +273,23 @@ public class Keyboard_y  implements View.OnClickListener {
         btn_8.setImageResource(R.drawable.siete);
         btn_9.setImageResource(R.drawable.ocho);
         btn_10.setImageResource(R.drawable.nueve);
+        btn_11.setImageResource(R.drawable.arroba);
+        btn_12.setImageResource(R.drawable.numero);
+        btn_13.setImageResource(R.drawable.euro);
+        btn_14.setImageResource(R.drawable.guionbajo);
+        btn_15.setImageResource(R.drawable.ampersand);
+        btn_16.setImageResource(R.drawable.guionmedio);
+        btn_17.setImageResource(R.drawable.mas);
+        btn_18.setImageResource(R.drawable.parentesis_a);
+        btn_19.setImageResource(R.drawable.parentesis_c);
+        btn_20.setImageResource(R.drawable.barradiagonal);
+        btn_21.setImageResource(R.drawable.asterisco);
+        btn_22.setImageResource(R.drawable.punto);
+        btn_23.setImageResource(R.drawable.comillassimples);
+        btn_24.setImageResource(R.drawable.dospuntos);
+        btn_25.setImageResource(R.drawable.coma);
+        btn_26.setImageResource(R.drawable.exclamacion);
+        btn_27.setImageResource(R.drawable.interrogacion);
     }
 
 
@@ -282,24 +298,31 @@ public class Keyboard_y  implements View.OnClickListener {
         index = edit.getSelectionStart();
         Editable editable = edit.getText();
 
-        if (isMayus){ //es mayuscula
 
-            if (ismodeHide){ //Si esta activo el modo oculto
-                textmodehide = textmodehide + abc[Integer.parseInt(view.getTag().toString())].toUpperCase();
-            }else{ //Modo oculto inactivo
-                editable.insert(index, abc[Integer.parseInt(view.getTag().toString())].toUpperCase());
-            }
+        if (isSimb){
+                if (ismodeHide){ //Si esta activo el modo oculto
+                    textmodehide = textmodehide + abc[Integer.parseInt(view.getTag().toString())].toUpperCase();
+                }else{ //Modo oculto inactivo
+                    editable.insert(index, abc[Integer.parseInt(view.getTag().toString())].toUpperCase());
+                }
+        }else{
+                if (isMayus){ //es mayuscula
 
-        }else { //Es minúsculas
+                    if (ismodeHide){ //Si esta activo el modo oculto
+                        textmodehide = textmodehide + abc[Integer.parseInt(view.getTag().toString())].toUpperCase();
+                    }else{ //Modo oculto inactivo
+                        editable.insert(index, abc[Integer.parseInt(view.getTag().toString())].toUpperCase());
+                    }
 
-            if (ismodeHide){ //Si esta activo el modo oculto
-                textmodehide = textmodehide + abc[Integer.parseInt(view.getTag().toString())];
-            }else{ //modo oculto inactivo
-                editable.insert(index, abc[Integer.parseInt(view.getTag().toString())]);
-            }
+                }else { //Es minúsculas
 
+                    if (ismodeHide){ //Si esta activo el modo oculto
+                        textmodehide = textmodehide + abc[Integer.parseInt(view.getTag().toString())];
+                    }else{ //modo oculto inactivo
+                        editable.insert(index, abc[Integer.parseInt(view.getTag().toString())]);
+                    }
+                }
         }
-
     }
 
     private void manageModoHide(){
