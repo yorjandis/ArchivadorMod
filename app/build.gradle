@@ -45,4 +45,6 @@ dependencies {
     implementation 'com.google.zxing:core:3.5.0'
     //implementacion para trabajo con conecciones http online
     implementation 'org.jsoup:jsoup:1.15.3'
+    //Para establecer permisos en tiempo de ejecución
+    implementation 'com.karumi:dexter:6.2.3'
 }

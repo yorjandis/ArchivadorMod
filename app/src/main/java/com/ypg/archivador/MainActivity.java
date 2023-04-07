@@ -6,7 +6,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -61,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //para evitar tomar capturas de pantallas:
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+
+
+
         setContentView(R.layout.activity_main);
 
 
@@ -84,12 +86,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //recabando los permisos necesarios
-           //pide solo el permiso si no se ha pedido y Aceptado anteriormente
-        SharedPreferences sharedPreferences = getSharedPreferences("config", Context.MODE_PRIVATE);
-        String aa = sharedPreferences.getString("isPermisoAprobado","");
-        if (aa.equals("") || aa.equals("no")){
-            PedirPermisos();
+        //Chequeando si se tiene los permisos de acceso al almacenamiento
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            if (!Environment.isExternalStorageManager()) { // Si no se tiene los permisos necesarios
+                UtilsY.msgY(getResources().getString(R.string.debe_permitir_acceso_al_almacenamiento));
+                PedirPermisos();
+            }
         }
 
 
@@ -134,12 +137,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        //chequeando los permisos obtenidos
 
-        //Para permisos de almacenaiento:::::::::::::::::::
-        if (requestCode == 2296) {
+     /*   if (requestCode == 2296) {
             if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 if (Environment.isExternalStorageManager()) { // okokokokokokok yor
-                    //Almacenando un flag que indica que se ha otorgado el permiso
+                    //Almacenando un flag que inica que se ha otorgado el permiso
                     SharedPreferences sharedPreferences = getSharedPreferences("config", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("isPermisoAprobado", "yes");
@@ -152,6 +155,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+
+*/
+
+
 
 
         //Recibiendo la lectura del codigo QR:
@@ -254,38 +261,38 @@ if (G_QR_RRESULTCODE == "5522"){
 
     //Dialog para recabar los permisos necesarios:
     private void PedirPermisos() {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle(R.string.app_name);
-            builder.setMessage(R.string.la_app_necesita_permisos);
-            builder.setCancelable(false);
-            builder.setPositiveButton(R.string.acepto, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                        try {
-                            Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-                            intent.addCategory("android.intent.category.DEFAULT");
-                            intent.setData(Uri.parse(String.format("package:%s",getApplicationContext().getPackageName())));
-                            startActivityForResult(intent, 2296);
-                        } catch (Exception e) {
-                            Intent intent = new Intent();
-                            intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-                            startActivityForResult(intent, 2296);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.app_name);
+        builder.setMessage(R.string.la_app_necesita_permisos);
+        builder.setCancelable(false);
+        builder.setPositiveButton(R.string.acepto, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                    try {
+                        Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                        intent.addCategory("android.intent.category.DEFAULT");
+                        intent.setData(Uri.parse(String.format("package:%s",getApplicationContext().getPackageName())));
+                        startActivity(intent);
 
-                        }
-                    } else {
-                        ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+                    } catch (Exception e) {
+                        Intent intent = new Intent();
+                        intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                        startActivity(intent);
                     }
+                } else {
+                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
                 }
-            });
-            builder.setNegativeButton(R.string.salir, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    finish();
-                }
-            });
+            }
+        });
+        builder.setNegativeButton(R.string.salir, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
 
-            builder.show();
+        builder.show();
 
     }
 

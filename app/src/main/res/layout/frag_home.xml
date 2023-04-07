@@ -66,25 +66,27 @@
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/fhome_btn_switch"
-        android:layout_width="74dp"
+        android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="52dp"
         android:layout_marginTop="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fhome_btn_createbd" />
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fhome_btn_openbd" />
 
     <TextView
         android:id="@+id/fhome_text_privacy"
-        android:layout_width="220dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="60dp"
+
+        android:layout_marginEnd="8dp"
         android:text="@string/acepto_los_terminos_y_condiciones"
         android:textColor="@color/white"
-        android:textSize="14sp"
-
-        app:layout_constraintStart_toEndOf="@+id/fhome_btn_switch"
-        app:layout_constraintTop_toBottomOf="@+id/fhome_btn_openbd" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/fhome_btn_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fhome_btn_createbd" />
 
     <TextView
         android:id="@+id/fhome_txt_version"
